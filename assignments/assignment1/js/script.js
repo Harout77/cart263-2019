@@ -30,7 +30,9 @@ let food = {
   y: 0,
   size: 64,
   color: '#55cccc',
-  vel:20,
+  //velocity
+  vx:20,
+  vy:20,
 }
 
 // preload()
@@ -133,4 +135,11 @@ function displayFood() {
 function positionFood() {
   food.x = random(0,width);
   food.y = random(0,height);
+}
+
+
+function runningfood() {
+
+
+
 }
