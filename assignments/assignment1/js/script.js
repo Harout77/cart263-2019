@@ -12,7 +12,7 @@ to overlap another circle (food) in order to grow bigger.
 
 // Constants defining key quantities
 const AVATAR_SIZE_GAIN = 50;
-const AVATAR_SIZE_LOSS = 1;
+const AVATAR_SIZE_LOSS = .5;
 
 // Avatar is an object defined by its properties
 let avatar = {
@@ -75,6 +75,7 @@ function draw() {
   checkCollision();
   displayAvatar();
   displayFood();
+  updatefood();
 }
 
 // updateAvatar()
@@ -140,8 +141,16 @@ function positionFood() {
 }
 
 
-function runningfood() {
+function updatefood() {
 
+  food.x += food.vx;
+  food.y += food.vy;
+  food.y = constrain(food.y,0,height);
+  food.x = constrain(food.x,0,width);
 
-
+  if (food.y === 0 || food.y === height) {
+    food.vy = -food.vy;
+  }else if(food.x === 0 || food.x === width) {
+    food.vx = -food.vx;
+}
 }
