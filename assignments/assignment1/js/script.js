@@ -33,6 +33,8 @@ let food = {
   //velocity
   vx:20,
   vy:20,
+  //speed
+  speed:5,
 }
 
 // preload()
