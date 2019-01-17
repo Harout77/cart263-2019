@@ -138,13 +138,23 @@ function displayFood() {
 function positionFood() {
   food.x = random(0,width);
   food.y = random(0,height);
+  food.vx = random(-food.vx,food.vx);
+  food.vy = random(-food.vy,food.vy);
 }
 
 
 function updatefood() {
+  //random velocity
 
+  //makeing it move
   food.x += food.vx;
   food.y += food.vy;
+  if(frameCount % 50 === 0){
+  food.vx = random(-food.speed,food.speed);
+  food.vy = random(-food.speed,food.speed);
+}
+
+  //constrain the location to move
   food.y = constrain(food.y,0,height);
   food.x = constrain(food.x,0,width);
 
