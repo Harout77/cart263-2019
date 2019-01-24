@@ -45,9 +45,21 @@ class Agent {
   //
   // Placeholder since subclasses/children should consider defining an update function
   update() {
+    this.x += this.vx;
+    this.y += this.vy;
+    if(frameCount % 50 === 0){
+      this.vx = random(-this.speed, this.speed);
+      this.vy = random(-this.speed, this.speed);
+    }
+    this.x = constrain(this.x,0,width);
+    this.y = constrain(this.y,0,height);
 
+    if (this.y === 0 || this.y === height) {
+  this.vy = -this.vy;
+}else if(this.x === 0 || this.x === width) {
+  this.vx = -this.vx;
   }
-
+}
   // display()
   //
   // Displays the agent as a coloured circle
