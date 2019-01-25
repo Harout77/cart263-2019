@@ -10,13 +10,13 @@ class Food extends Agent {
   // Pass arguments on to the super() constructor (e.g. for Agent)
   // Also set a minimum and maximum size for this food object which it
   // will vary between when it resets
-  constructor(x,y,minSize,maxSize,vx,vy,speed) {
+  constructor(x,y,minSize,maxSize,speed) {
     super(x,y,random(minSize,maxSize),'#55cccc');
     this.minSize = minSize;
     this.maxSize = maxSize;
-    this.vx = vx;
-    this.vy = vy;
     this.speed = speed;
+    this.vx = random(-speed,speed);
+    this.vy = random(-speed,speed);
   }
 
   // reset()
@@ -27,6 +27,8 @@ class Food extends Agent {
     this.x = random(0,width);
     this.y = random(0,height);
     this.size = random(this.minSize,this.maxSize);
+    this.vx = random(-this.speed,this.speed);
+    this.vy = random(-this.speed,this.speed);
 
   }
 
