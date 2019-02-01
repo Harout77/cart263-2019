@@ -15,8 +15,6 @@ secrets become revealed!
 let $spans;
 // A box to store the secrets
 let $secretsFound = 0;
-
-
 // When the document is loaded we call the setup function
 $(document).ready(setup);
 
@@ -30,16 +28,11 @@ function setup() {
   $spans.on('click',spanClicked);
   // Set an interval of 500 milliseconds to update the state of the page
   setInterval(update,500);
-
   $('.secrets').on('click', findSecret);
-
   $( "#dialog" ).dialog({
     autoOpen: false
   });
-
-
 };
-
 // spanClicked()
 //
 // When a span is clicked we remove its revealed class and add the redacted class
@@ -49,7 +42,6 @@ function spanClicked() {
   $(this).removeClass('revealed');
   $(this).addClass('redacted');
 }
-
 // update()
 //
 // Update is called every 500 milliseconds and it updates all the spans on the page
