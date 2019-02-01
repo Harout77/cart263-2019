@@ -13,6 +13,9 @@ secrets become revealed!
 
 // A place to store the jQuery selection of all spans
 let $spans;
+// A box to store the secrets
+let $secretsFound = 0;
+
 
 // When the document is loaded we call the setup function
 $(document).ready(setup);
@@ -27,6 +30,14 @@ function setup() {
   $spans.on('click',spanClicked);
   // Set an interval of 500 milliseconds to update the state of the page
   setInterval(update,500);
+
+  $('.secrets').on('click', findSecret);
+
+  $( "#dialog" ).dialog({
+    autoOpen: false
+  });
+
+
 };
 
 // spanClicked()
@@ -34,6 +45,7 @@ function setup() {
 // When a span is clicked we remove its revealed class and add the redacted class
 // thus blacking it out
 function spanClicked() {
+  console.log('SC');
   $(this).removeClass('revealed');
   $(this).addClass('redacted');
 }
@@ -53,12 +65,34 @@ function update() {
 // redacted class and adding the revealed class. Because this function is called
 // by each(), "this" refers to the current element that each has selected.
 function updateSpan() {
+  console.log('UPDATE SPAN RAN');
   let r = Math.random();
   if (r < 0.1) {
     $(this).removeClass('redacted');
-    $(this).addClass('revealed');
-  }
+    $(this).off('mouseover');  }
 }
+function findSecret() {
+  console.log('FIND SECRET RAN');
+  $secretsFound ++;
+  $('#secretbox').text($secretsFound);
+  $(this).off('click');
+  $(this).hide();
+  if ($secretsFound === 10){
+    $( "#dialog" ).dialog('open');
+  }
+
+}
+
+
+
+
+function win (event,ui) {
+
+}
+
+
+
+
 
 // A version using anonymous functions:
 
