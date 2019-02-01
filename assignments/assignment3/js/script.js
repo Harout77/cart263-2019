@@ -83,17 +83,6 @@ function findSecret() {
 
 }
 
-
-
-
-function win (event,ui) {
-
-}
-
-
-
-
-
 // A version using anonymous functions:
 
 // $(document).ready(function () {
