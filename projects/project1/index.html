@@ -6,9 +6,9 @@
 
   <!-- CSS stylesheet(s) -->
   <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.css" />
-  <link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css" />
-  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/vader/jquery-ui.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css" /> -->
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/redmond/jquery-ui.css" />
 
   <!-- Libraries -->
   <script
@@ -21,7 +21,6 @@
   crossorigin="anonymous"></script>
 
 
-  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
   <script
   src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
@@ -37,6 +36,7 @@
   <h1>SISPHUS</h1>
   <div>
     <p>This game is simple just slide the slider to the end to win ! </p>
+    <p>Press the arrow keys to slide the slider</p>
   <!-- <p>
     <label for="amount">Minimum number of bedrooms:</label>
     <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
@@ -44,6 +44,15 @@
   <div id="slider">
     <div id="custom-handle" class="ui-slider-handle"></div>
   </div>
+
+  <div id="dialog" title="You Lose">
+    <button type="submit"  onClick="refreshPage()">Try Again</button>
+
+
+  </div>
+
+
 </body>
+
 
 </html>

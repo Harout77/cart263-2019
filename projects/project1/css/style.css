@@ -5,32 +5,37 @@ This is the style file for this project.
 **********************************************/
 
 body {
-  background-color: #f4c542;
-  /* cursor: none; */
+  background-image:url("/assets/images/background.png");
+
+  /* background-color: #f4c542; */
+  cursor: none;
 
 }
 h1 {
-
+  font-size: 86px;
   text-align: center;
+  color: white;
+
 }
 
 
 p {
   text-align: center;
   font-size: 36px;
+  color: white;
   margin: 100px;
 }
 #slider {
   margin: 100px;
-  background-color: red;
+  /* background-color: red; */
 
 }
 
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+/* .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
 
 background-color: red;
 
-}
+} */
 
 #custom-handle {
     width: 3em;
@@ -40,3 +45,12 @@ background-color: red;
     text-align: center;
     line-height: 1.6em;
   }
+
+.ui-dialog-title {
+  text-align: center;
+}
+
+ui-dialog-content ui-widget-content {
+
+  width: auto; min-height:; max-height: none; height: auto !important;"
+}
