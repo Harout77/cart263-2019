@@ -33,7 +33,7 @@
 <body>
 
 <div>
-  <h1>SISPHUS</h1>
+  <h1>SYSYPHUS</h1>
   <div>
     <p>This game is simple just slide the slider to the end to win ! </p>
     <p>Press the arrow keys to slide the slider</p>
@@ -41,18 +41,28 @@
     <label for="amount">Minimum number of bedrooms:</label>
     <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
   </p> -->
+  <!-- slider goes here -->
   <div id="slider">
     <div id="custom-handle" class="ui-slider-handle"></div>
   </div>
+  <!-- slider ends here -->
+
+  <!-- dialog goes here -->
 
   <div id="dialog" title="You Lose">
+    <a> SYSYPHUS can't win, he must be punished !</a><br><br>
     <button type="submit"  onClick="refreshPage()">Try Again</button>
-
 
   </div>
 
+  <!-- dialog ends here -->
 
+  <!-- audio -->
+  <audio id="myAudio" autoplay>
+    <source src="assets/sounds/music.wav" type="audio/ogg">
+  </audio>
 </body>
 
+<!-- End audio -->
 
 </html>

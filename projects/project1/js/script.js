@@ -2,9 +2,8 @@
 
 /*****************
 
-Title of Project
-Author Name
-
+SYSYPHUS TORMENT
+Harout Kullukian
 This is a template. You must fill in the title,
 author, and this description to match your project!
 
@@ -26,12 +25,14 @@ $( function() {
 
          $(this).slider( "disable" );
 
-       //   let d = $('<div><center>Sorry try again!</center></div>');
-       //   $('body').append(d);
-       //   d.dialog();
+  ///// DIALOGE BOX GOES HERE //////
 
-       $( "#dialog" ).dialog();
+       $( "#dialog" ).dialog({
+         height: 50,
+         // width: 50
+       });
        $( "button" ).show();
+       $( "a" ).show();
 
 
        }
@@ -45,14 +46,35 @@ $( function() {
      }
 
    });
+   ///// FOCUS THE GAME ////
    handle.focus();
 
+
+
+ ///// LAZY WAY TO HIDE MY PROBLEMS
    $( "button" ).hide();
+   $( "a" ).hide();
+
 
 
  } );
+
+ ///// refreshPage /////
  function refreshPage(){
      window.location.reload();
- } 
+ }
+
+//// Audio /////
+
+/// audio music
+ document.getElementById("assets/sounds/music.wav").loop = true;
+ function enableLoop() {
+   x.loop = true;
+   x.load();
+ }
+ //// END Audio /////
+ //// /////
+
+
 
  $('body').css('cursor', 'none');

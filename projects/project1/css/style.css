@@ -49,8 +49,20 @@ background-color: red;
 .ui-dialog-title {
   text-align: center;
 }
+/*
+ui-dialog-content ui-widget-content{
+  width: auto; min-height:0; max-height: none; height: auto !important;
 
-ui-dialog-content ui-widget-content {
+} */
 
-  width: auto; min-height:; max-height: none; height: auto !important;"
+#dialog {
+
+  width: auto; min-height:; max-height: none; height: auto !important;
+  margin: 0 auto;
+  text-align: center;
+
+}
+#lose {
+
+  color:black;
 }
