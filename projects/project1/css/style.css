@@ -3,3 +3,40 @@
 This is the style file for this project.
 
 **********************************************/
+
+body {
+  background-color: #f4c542;
+  /* cursor: none; */
+
+}
+h1 {
+
+  text-align: center;
+}
+
+
+p {
+  text-align: center;
+  font-size: 36px;
+  margin: 100px;
+}
+#slider {
+  margin: 100px;
+  background-color: red;
+
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+
+background-color: red;
+
+}
+
+#custom-handle {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+  }
