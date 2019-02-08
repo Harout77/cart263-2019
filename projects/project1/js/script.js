@@ -67,11 +67,7 @@ $( function() {
 //// Audio /////
 
 /// audio music
- document.getElementById("assets/sounds/music.wav").loop = true;
- function enableLoop() {
-   x.loop = true;
-   x.load();
- }
+  
  //// END Audio /////
  //// /////
 
