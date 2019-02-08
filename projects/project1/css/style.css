@@ -6,6 +6,8 @@ This is the style file for this project.
 
 body {
   background-image:url("/assets/images/background.png");
+  background-image:url("https://sketchdrawingmart.com/wp-content/uploads/2018/11/drawings-of-pixel-landscape-a-quick-and-dirty-guide-to-creating-pixel-art-david-byttow-medium.png");
+
 
   /* background-color: #f4c542; */
   cursor: none;
