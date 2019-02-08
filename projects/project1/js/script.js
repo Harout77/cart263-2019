@@ -21,7 +21,7 @@ $( function() {
        handle.text( ui.value );
 
 //// disale the slider at a certain amount
-       if(ui.value > 2){
+       if(ui.value > 90){
 
          $(this).slider( "disable" );
 
