@@ -17,7 +17,7 @@ Chewing: https://freesound.org/people/InspectorJ/sounds/412068/
 // Sound effects for the experience
 let buzzSFX = new Audio("assets/sounds/buzz.mp3");
 let crunchSFX = new Audio("assets/sounds/crunch.wav");
-let yuckSFX = new Audio("assets/sounds/crunch.wav");
+let yuckSFX = new Audio("assets/sounds/yuck.mp3");
 
 // Variable to hold our two key elements
 let $mouth;
@@ -33,8 +33,8 @@ function setup() {
   $mouth.droppable({
     // The drop option specifies a function to call when a drop is completed
     drop: flyDropped,
+    accept: '#fly',
 
-    accept: '#fly'
   });
 
   // Get the fly element from the page
@@ -43,12 +43,13 @@ function setup() {
   $fly.draggable();
 
   // Start up the buzzing of the fly
-  buzzSFX.loop = true;
+  buzzSFX.loop = false;
   buzzSFX.play();
 
    $trump = $('#trump');
    $trump.draggable({
      revert: true,
+     start: trump
    });
 
 }
@@ -94,3 +95,7 @@ function chew () {
     $mouth.attr('src','assets/images/mouth-open.png');
   }
 }
+
+function trump(event,ui) {
+      yuckSFX.play();
+    }
