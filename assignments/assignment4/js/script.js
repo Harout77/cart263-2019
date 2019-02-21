@@ -17,10 +17,12 @@ Chewing: https://freesound.org/people/InspectorJ/sounds/412068/
 // Sound effects for the experience
 let buzzSFX = new Audio("assets/sounds/buzz.mp3");
 let crunchSFX = new Audio("assets/sounds/crunch.wav");
+let yuckSFX = new Audio("assets/sounds/crunch.wav");
 
 // Variable to hold our two key elements
 let $mouth;
 let $fly;
+let $trump;
 
 $(document).ready(setup);
 
@@ -30,7 +32,9 @@ function setup() {
   // Make it droppable
   $mouth.droppable({
     // The drop option specifies a function to call when a drop is completed
-    drop: flyDropped
+    drop: flyDropped,
+
+    accept: '#fly'
   });
 
   // Get the fly element from the page
@@ -41,6 +45,12 @@ function setup() {
   // Start up the buzzing of the fly
   buzzSFX.loop = true;
   buzzSFX.play();
+
+   $trump = $('#trump');
+   $trump.draggable({
+     revert: true,
+   });
+
 }
 
 // flyDropped(event,ui)
