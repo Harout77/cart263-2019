@@ -1,0 +1,11 @@
+Zergnet: The Ugly Page Guessign game is inspired by two of my favorite passtime, listening to posdcasts while working and exploring the weird, ugly space of the ads that's invading our websites. 
+The posdcast that i'm insired from is called "Internet Explorez" Yes with a z, is a weekly podcast and they talk about weird stuff that's going on the internet.
+They have a segment called guess the zergnet pages where each of the hosts guess a number and whoever guessed the closest wins. 
+
+For this project, I used few voice apis and experimented with them and figure out what I can do with them. Finally after many attempts i got it to work but not exactly the way I wanted.
+
+The essay of Something is wrong with the internet also insired me with this project. Well that was the whole point of it. The essay by James Bridle is about the ugly side of the internet and everything that's wrong with it.
+Zergnet is the same thing. it's like a russian roullete of pages to read to find the intresting information you were looking for when you saw the ad and decided to click on it. Most of the time
+ when you click on one of those sites it will take you 3-4 sometimes more time to get to the article you want to read. I wanted to do the same with this but had no idea how to implement the voice or sound libraries.
+ 
+ Maybe in the future when i have time, i can come back to the projects where i couldn't finish and finish it the way i wanted it to be. 
