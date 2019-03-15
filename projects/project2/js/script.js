@@ -11,44 +11,40 @@ author, and this description to match your project!
 ******************/
  // Possible answer array
 
-let answers =[
-  "one",
-  "two",
-  "three",
-  "four",
-  "five",
-  "six",
-  "seven",
-  "eight",
-  "nine",
-  "ten"
-]
-
-
-let currentAnswer ='';
+// let answers =[
+//   "one",
+//   "two",
+//   "three",
+//   "four",
+//   "five",
+//   "six",
+//   "seven",
+//   "eight",
+//   "nine",
+//   "ten"
+// ]
+//
+//
+//
+// let currentAnswer ='';
 
 $(document).ready(function() {
 
-  // Anyyang verification
   if (annyang) {
+    // Let's define our first command. First the text we expect, and then the function it should call
+    var commands = {
+      'say hello (to my little) friend': greeting
 
-    /// the player should say this phrase followed by the answer
-    var command = {
-      "I think there are * answer": handleUserSpeech,
     };
 
+    // Add our commands to annyang
+    annyang.addCommands(commands);
 
-
-    /// giving anyand commands
-    annyang.addCommands(command);
-
-    //// Ayand start to listen
+    // Start listening. You can call this here, or attach this call to an event, button, etc.
     annyang.start();
-
-    // Choose a phrase for the user to say first
-    currentAnswer = getNewPhrase();
-
-    // Display the phrase the player must say
-    $('#command').text('Say, "I think there are ' + currentAnswer + '."');
   }
-});
+
+  var greeting = function() {
+    $('#greeting').text('Hello!');
+  }
+}
