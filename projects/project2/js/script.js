@@ -1,5 +1,7 @@
-$(function(){
 
+//// random zer image generator
+
+$(function(){
 
 let zergs =new Array ();
 zergs[0] = "/assets/images/1.jpg";
@@ -39,7 +41,7 @@ $(document).ready(function() {
 $(document).on('click',function () {
 
 // question sentence goes here
-   question("HELLO WORLD");
+   question("how many pages does this zerg site contains ?");
 
  });
 });
