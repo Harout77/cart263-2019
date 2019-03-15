@@ -1,3 +1,18 @@
+$(function(){
+
+
+let zergs =new Array ();
+zergs[0] = "/assets/images/1.jpg";
+zergs[1] = "/assets/images/10.jpg";
+zergs[2] = "/assets/images/11.jpg";
+zergs[3] = "/assets/images/25.jpg";
+var size = zergs.length
+var x = Math.floor(size*Math.random())
+
+$('#zerg').attr('src',zergs[x]);
+})
+
+
 
 
 
@@ -13,24 +28,14 @@ let voiceParameters = {
 }
 
 
-// $(document).ready(function () {
-//
-//   // Make sure we can run annyang (Chrome-dependent), otherwise no point
-//   // if (annyang) {
-//   //   $(document).on('click',start);
-//   // }
-//
-//
-// //
-// // responsiveVoice.speak("hello world", "UK English Male", {onstart: StartCallback, onend: EndCallback});
-//
-//
-// });
+
 
 
 $(document).ready(function() {
 
+// randomzerg();
 
+/// Start the voice on click
 $(document).on('click',function () {
 
 // question sentence goes here
@@ -43,3 +48,9 @@ $(document).on('click',function () {
 function question (text) {
   responsiveVoice.speak(text,voice,voiceParameters);
 }
+// // function randomzerg(){
+//   function imgRandom(imgArr) {
+//         return zergs[Math.floor(Math.random() * zergs.length)];
+//     }
+//  console.log(imgRandom(img));
+// }
