@@ -3,6 +3,13 @@
 This is the style file for this project.
 
 **********************************************/
+body {
+  background-color: lightblue;
+}
+h1 {
+
+  color: blue;
+}
 
 .button {
   background-color: #4CAF50; /* Green */
