@@ -54,7 +54,7 @@ function gotData(data) {
   let catA = "a";
   let catAn = cat.charAt(0);
   if (vowels.indexOf(catAn) !== -1) {
-    catAn = "an";
+    catA = "an";
   }
 
   // Same again for room
@@ -62,7 +62,7 @@ function gotData(data) {
   let roomA = "a";
   let roomAn = room.charAt(0);
   if (vowels.indexOf(roomAn) !== -1) {
-    roomAn = "an";
+    roomA = "an";
   }
 
   /// AND FOR MOVIES
@@ -72,7 +72,7 @@ function gotData(data) {
   // Now we can construct our description with a template string
   // We have the basic structure of a sentence and we substitute in the
   // values we've just calculated
-  let description = `${condiment} ${verb} like a ${catAn}${cat}  in a ${roomAn}${room} watching ${movies}.`;
+  let description = `${condiment} ${verb} like ${catA} ${cat}  in ${roomA} ${room} watching ${movies}.`;
 
   // Finally, we add it to the page and hey presto!
   $('body').append(description)
