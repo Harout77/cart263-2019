@@ -54,7 +54,7 @@ function gotData(data) {
 
   // Same again for room
   let room = getRandomElement(data.rooms);
-
+  /// AND FOR MOVIES 
   let movies = getRandomElement(data.movies);
 
   // Now we can construct our description with a template string
