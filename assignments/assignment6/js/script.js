@@ -16,7 +16,7 @@ http://rednoise.org/rita/index.html
 
 */
 
-let vowels = "aeiou";
+let vowels = "aeiouAEIOU";
 
 $(document).ready(function() {
 
@@ -51,16 +51,28 @@ function gotData(data) {
 
   // Now the cat
   let cat = getRandomElement(data.cats);
+  let catA = "a";
+  let catAn = cat.charAt(0);
+  if (vowels.indexOf(catAn) !== -1) {
+    catAn = "an";
+  }
 
   // Same again for room
   let room = getRandomElement(data.rooms);
-  /// AND FOR MOVIES 
+  let roomA = "a";
+  let roomAn = room.charAt(0);
+  if (vowels.indexOf(roomAn) !== -1) {
+    roomAn = "an";
+  }
+
+  /// AND FOR MOVIES
   let movies = getRandomElement(data.movies);
+
 
   // Now we can construct our description with a template string
   // We have the basic structure of a sentence and we substitute in the
   // values we've just calculated
-  let description = `${condiment} ${verb} like a ${cat} in a ${room} watching ${movies}.`;
+  let description = `${condiment} ${verb} like a ${catAn}${cat}  in a ${roomAn}${room} watching ${movies}.`;
 
   // Finally, we add it to the page and hey presto!
   $('body').append(description)
