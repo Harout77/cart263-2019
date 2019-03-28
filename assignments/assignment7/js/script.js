@@ -24,7 +24,7 @@ const RELEASE = 0.1;
 // We can get the frequencies of these notes from THE INTERNET, e.g.
 // http://pages.mtu.edu/~suits/notefreqs.html
 let frequencies = [
-  220,246.94,277.18,293.66,329.63,369.99,415.30
+    220, 246.94, 277.18, 293.66, 329.63, 369.99, 415.30
 ];
 // The synth
 let synth;
@@ -36,7 +36,7 @@ let hihat;
 // Each array element is one beat and has a string with each
 // drum to play for that beat
 // x = kick, o = snare, * = hihat
-let pattern = ['*','x','ox*',' ','*','x','xo','*'];
+let pattern = ['*', 'x', 'ox*', ' ', '*', 'x', 'xo', '*'];
 // Which beat of the pattern we're at right now
 let patternIndex = 0;
 
@@ -49,93 +49,95 @@ let background;
 //
 // Creat canvas, set up the synth and sound files.
 function setup() {
-  createCanvas(windowWidth,windowHeight);
+    createCanvas(windowWidth, windowHeight);
 
 
-  // Create the synth
-  synth = new Pizzicato.Sound({
-    source: 'wave',
-    options: {
-      type: 'sine',
-      attack: ATTACK,
-      release: RELEASE,
-      frequency: 220
-    }
-  });
-  ///// NEW EFFECT QUADRFUZZ
-  let quadrafuzz = new Pizzicato.Effects.Quadrafuzz({
-      lowGain: 1,
-      midLowGain: 1,
-      midHighGain: 0.5,
-      highGain: 0.6,
-      mix: 1.0
-  });
+    // Create the synth
+    synth = new Pizzicato.Sound({
+        source: 'wave',
+        options: {
+            type: 'sine',
+            attack: ATTACK,
+            release: RELEASE,
+            frequency: 220
+        }
+    });
+    ///// NEW EFFECT QUADRFUZZ
+    let quadrafuzz = new Pizzicato.Effects.Quadrafuzz({
+        lowGain: 1,
+        midLowGain: 1,
+        midHighGain: 0.5,
+        highGain: 0.6,
+        mix: 1.0
+    });
 
-  synth.addEffect(quadrafuzz);
-//// END OF NEW EFFECT
+    synth.addEffect(quadrafuzz);
 
-  // Load the three drum sounds as wav files
-  kick = new Pizzicato.Sound({
-    source: 'file',
-    options: {
-      path: 'assets/sounds/kick.wav'
-    }
-  });
+    //// END OF NEW EFFECT
 
-  snare = new Pizzicato.Sound({
-    source: 'file',
-    options: {
-      path: 'assets/sounds/snare.wav'
-    }
-  });
+    // Load the three drum sounds as wav files
+    kick = new Pizzicato.Sound({
+        source: 'file',
+        options: {
+            path: 'assets/sounds/kick.wav'
+        }
+    });
 
-  hihat = new Pizzicato.Sound({
-    source: 'file',
-    options: {
-      path: 'assets/sounds/hihat.wav'
-    }
-  });
+    snare = new Pizzicato.Sound({
+        source: 'file',
+        options: {
+            path: 'assets/sounds/snare.wav'
+        }
+    });
+
+    hihat = new Pizzicato.Sound({
+        source: 'file',
+        options: {
+            path: 'assets/sounds/hihat.wav'
+        }
+
+    });
+
+    let delay = new Pizzicato.Effects.Delay();
+    hihat.addEffect(delay);
 }
-
 // mousePressed
 //
 // Using this to start the note and drum sequences to get around
 // user interaction (and to give the files time to load)
 function mousePressed() {
 
-  if (play1 === true) {
+    if (play1 === true) {
 
-    playSynth();
+        playSynth();
 
-    // Start an interval for the notes
-    setInterval(playNote,NOTE_TEMPO);
-    // Start an interval for the drums
-    setInterval(playDrum,DRUM_TEMPO);
-    play1 = false;
+        // Start an interval for the notes
+        setInterval(playNote, NOTE_TEMPO);
+        // Start an interval for the drums
+        setInterval(playDrum, DRUM_TEMPO);
+        play1 = false;
 
-  }
+    }
 }
-
 // playNote
 //
 // Chooses a random frequency and assigns it to the synth
 function playNote() {
-  // Pick a random frequency from the array
-  let frequency = frequencies[Math.floor(Math.random() * frequencies.length)];
-  // Set the synth's frequency
-  synth.frequency = frequency;
-  // If it's note already play, play the synth
-  let synthPause = Math.random();
-  if (synthPause  > 0.3){
-  synth.play();
-}
-  else {
-  synth.stop();
-}
-playSynth.attack = mouseX/720*0.5;
-  playSynth.release = mouseY/400;
-  synthPause = 500 * Math.floor(Math.random()*4);
-  setTimeout(500);
+    // Pick a random frequency from the array
+    let frequency = frequencies[Math.floor(Math.random() * frequencies.length)];
+    // Set the synth's frequency
+    synth.frequency = frequency;
+    // If it's note already play, play the synth
+    let synthPause = Math.random();
+    if (synthPause > 0.3) {
+        synth.play();
+    } else {
+        synth.stop();
+    }
+    playSynth.attack = mouseX / 720 * 0.5;
+    playSynth.release = mouseY / 400;
+    synthPause = 500 * Math.floor(Math.random() * 4);
+    setTimeout(500);
 }
 
 // playDrum()
@@ -143,33 +145,37 @@ playSynth.attack = mouseX/720*0.5;
 // Checks the string representing the drums for the current beat
 // and plays the appropriate sounds
 function playDrum() {
-  // Get the symbols for the current beat in the pattern
-  let symbols = pattern[patternIndex];
+    // Get the symbols for the current beat in the pattern
+    let symbols = pattern[patternIndex];
 
-  // If there's an 'x' in there, play the kick
-  if (symbols.indexOf('x') !== -1) {
-    kick.play();
-  }
-  // If there's an 'o' in there, play the snare
-  if (symbols.indexOf('o') !== -1) {
-    snare.play();
-  }
-  // If there's an '*' in there, play the hihat
-  if (symbols.indexOf('*') !== -1) {
-    hihat.play();
-  }
-  // Advance the pattern by a beat
-  patternIndex = (patternIndex + 1) % pattern.length;
+    // If there's an 'x' in there, play the kick
+    if (symbols.indexOf('x') !== -1) {
+        kick.play();
+    }
+    // If there's an 'o' in there, play the snare
+    if (symbols.indexOf('o') !== -1) {
+        snare.play();
+    }
+    // If there's an '*' in there, play the hihat
+    if (symbols.indexOf('*') !== -1) {
+        hihat.play();
+    }
+    // Advance the pattern by a beat
+    patternIndex = (patternIndex + 1) % pattern.length;
+
+
 }
-function playSynth(){
-  let duration = Math.ceil(Math.random() * 5) * NOTE_TEMPO;
-  // console.log(duration);
-  setTimeout(playSynth,duration);
-  playNote();
+
+
+
+function playSynth() {
+    let duration = Math.ceil(Math.random() * 5) * NOTE_TEMPO;
+    // console.log(duration);
+    setTimeout(playSynth, duration);
+    playNote();
 }
 // draw()
 //
 // Nothing right now.
 
-function draw() {
-}
+function draw() {}
