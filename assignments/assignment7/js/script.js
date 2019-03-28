@@ -125,6 +125,8 @@ function mousePressed() {
         play1 = false;
 
     }
+    $("h1").hide();
+
 }
 // playNote
 //
