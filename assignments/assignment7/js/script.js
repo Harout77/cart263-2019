@@ -41,7 +41,7 @@ let pattern = ['x','*','xo*',' ','x','x','xo','*'];
 let patternIndex = 0;
 
 
-let play = true;
+let play1 = true;
 let background;
 
 
@@ -51,17 +51,6 @@ let background;
 function setup() {
   createCanvas(windowWidth,windowHeight);
 
-  ///// NEW EFFECT QUADRFUZZ
-  var quadrafuzz = new Pizzicato.Effects.Quadrafuzz({
-      lowGain: 0.6,
-      midLowGain: 0.8,
-      midHighGain: 0.5,
-      highGain: 0.6,
-      mix: 1.0
-  });
-
-  synth.addEffect(quadrafuzz);
-//// END OF NEW EFFECT
 
   // Create the synth
   synth = new Pizzicato.Sound({
@@ -73,6 +62,17 @@ function setup() {
       frequency: 220
     }
   });
+  ///// NEW EFFECT QUADRFUZZ
+  let quadrafuzz = new Pizzicato.Effects.Quadrafuzz({
+      lowGain: 1,
+      midLowGain: 1,
+      midHighGain: 0.5,
+      highGain: 0.6,
+      mix: 1.0
+  });
+
+  synth.addEffect(quadrafuzz);
+//// END OF NEW EFFECT
 
   // Load the three drum sounds as wav files
   kick = new Pizzicato.Sound({
@@ -102,10 +102,16 @@ function setup() {
 // Using this to start the note and drum sequences to get around
 // user interaction (and to give the files time to load)
 function mousePressed() {
-  // Start an interval for the notes
-  setInterval(playNote,NOTE_TEMPO);
-  // Start an interval for the drums
-  setInterval(playDrum,DRUM_TEMPO);
+
+  if (play1 === true) {
+
+    playSynth();
+
+    // Start an interval for the notes
+    setInterval(playNote,NOTE_TEMPO);
+    // Start an interval for the drums
+    setInterval(playDrum,DRUM_TEMPO);
+  }
 }
 
 // playNote
@@ -143,7 +149,12 @@ function playDrum() {
   // Advance the pattern by a beat
   patternIndex = (patternIndex + 1) % pattern.length;
 }
-
+function playSynth(){
+  let duration = Math.ceil(Math.random() * 5) * NOTE_TEMPO;
+  // console.log(duration);
+  setTimeout(playSynth,duration);
+  playNote();
+}
 // draw()
 //
 // Nothing right now.
