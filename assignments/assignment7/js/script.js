@@ -111,6 +111,8 @@ function mousePressed() {
     setInterval(playNote,NOTE_TEMPO);
     // Start an interval for the drums
     setInterval(playDrum,DRUM_TEMPO);
+    play1 = false;
+
   }
 }
 
@@ -123,7 +125,13 @@ function playNote() {
   // Set the synth's frequency
   synth.frequency = frequency;
   // If it's note already play, play the synth
+  let synthPause = Math.random();
+  if (synthPause > 0.3){
   synth.play();
+}
+  else {
+  synth.stop();
+}
 }
 
 // playDrum()
