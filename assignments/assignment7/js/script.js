@@ -40,11 +40,28 @@ let pattern = ['x','*','xo*',' ','x','x','xo','*'];
 // Which beat of the pattern we're at right now
 let patternIndex = 0;
 
+
+let play = true;
+let background;
+
+
 // setup()
 //
 // Creat canvas, set up the synth and sound files.
 function setup() {
   createCanvas(windowWidth,windowHeight);
+
+  ///// NEW EFFECT QUADRFUZZ
+  var quadrafuzz = new Pizzicato.Effects.Quadrafuzz({
+      lowGain: 0.6,
+      midLowGain: 0.8,
+      midHighGain: 0.5,
+      highGain: 0.6,
+      mix: 1.0
+  });
+
+  synth.addEffect(quadrafuzz);
+//// END OF NEW EFFECT
 
   // Create the synth
   synth = new Pizzicato.Sound({
