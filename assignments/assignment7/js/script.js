@@ -42,7 +42,9 @@ let patternIndex = 0;
 
 
 let play1 = true;
-let background;
+
+/// background color
+let amt, startColor, newColor;
 
 
 // setup()
@@ -50,6 +52,11 @@ let background;
 // Creat canvas, set up the synth and sound files.
 function setup() {
     createCanvas(windowWidth, windowHeight);
+    startColor = color(255,255,255);
+      newColor = color(random(255),random(255),random(255));
+      amt = 0;
+
+      background(startColor);
 
 
     // Create the synth
@@ -178,4 +185,12 @@ function playSynth() {
 //
 // Nothing right now.
 
-function draw() {}
+function draw() {
+  background(lerpColor(startColor, newColor, amt));
+   amt += 0.01;
+   if(amt >= 1){
+     amt = 0.0;
+     startColor = newColor;
+     newColor = color(random(255),random(255),random(255));
+   }
+}
