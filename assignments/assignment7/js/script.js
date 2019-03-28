@@ -36,7 +36,7 @@ let hihat;
 // Each array element is one beat and has a string with each
 // drum to play for that beat
 // x = kick, o = snare, * = hihat
-let pattern = ['x','*','xo*',' ','x','x','xo','*'];
+let pattern = ['*','x','ox*',' ','*','x','xo','*'];
 // Which beat of the pattern we're at right now
 let patternIndex = 0;
 
@@ -126,12 +126,16 @@ function playNote() {
   synth.frequency = frequency;
   // If it's note already play, play the synth
   let synthPause = Math.random();
-  if (synthPause > 0.3){
+  if (synthPause  > 0.3){
   synth.play();
 }
   else {
   synth.stop();
 }
+playSynth.attack = mouseX/720*0.5;
+  playSynth.release = mouseY/400;
+  synthPause = 500 * Math.floor(Math.random()*4);
+  setTimeout(500);
 }
 
 // playDrum()
