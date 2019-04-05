@@ -34,14 +34,16 @@ var config = {
 
 
 function preload() {
-  this.load.image('sky', 'assets/sky.png');
+  this.load.image('background', 'assets/BG.png');
   this.load.image('ground', 'assets/platform.png');
   this.load.image('star', 'assets/star.png');
   this.load.image('bomb', 'assets/bomb.png');
-  this.load.spritesheet('dude', 'assets/dude.png', {
+  this.load.spritesheet('boy', 'assets/boy.png', {
     frameWidth: 32,
     frameHeight: 48
   });
+  this.load.image('button', 'assets/button.png');
+
 }
 
 
@@ -50,6 +52,7 @@ var platforms;
 var cursors;
 var stars;
 var bombs;
+var button;
 var score = 0;
 var scoreText;
 
@@ -57,7 +60,7 @@ var game = new Phaser.Game(config);
 
 function create() {
   ///// CREATE WORLD /////
-  this.add.image(400, 300, 'sky');
+  this.add.image(400, 300, 'background');
 
   platforms = this.physics.add.staticGroup();
 
@@ -69,14 +72,14 @@ function create() {
 
   ///////CREATE PLAYER //////
 
-  player = this.physics.add.sprite(100, 450, 'dude');
+  player = this.physics.add.sprite(100, 450, 'boy');
 
   player.setBounce(0.2);
   player.setCollideWorldBounds(true);
 
   this.anims.create({
     key: 'left',
-    frames: this.anims.generateFrameNumbers('dude', {
+    frames: this.anims.generateFrameNumbers('boy', {
       start: 0,
       end: 3
     }),
@@ -87,7 +90,7 @@ function create() {
   this.anims.create({
     key: 'turn',
     frames: [{
-      key: 'dude',
+      key: 'boy',
       frame: 4
     }],
     frameRate: 20
@@ -95,7 +98,7 @@ function create() {
 
   this.anims.create({
     key: 'right',
-    frames: this.anims.generateFrameNumbers('dude', {
+    frames: this.anims.generateFrameNumbers('boy', {
       start: 5,
       end: 8
     }),
@@ -141,8 +144,9 @@ this.physics.add.collider(bombs, platforms);
 this.physics.add.collider(player, bombs, hitBomb, null, this);
 
 
-
+////// GAME OVER ///////
 }
+
     /////// ACTION TO COLLECT THE STARS //////
 
 function collectStar(player, star) {
@@ -161,9 +165,10 @@ function collectStar(player, star) {
      var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
 
      var bomb = bombs.create(x, 16, 'bomb');
-     bomb.setBounce(1);
+     bomb.setBounce(.5);
      bomb.setCollideWorldBounds(true);
      bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
+
 
  }
 }
@@ -178,6 +183,7 @@ function hitBomb (player, bomb)
     player.anims.play('turn');
 
     gameOver = true;
+
 }
 
 
