@@ -20,77 +20,47 @@
 	</head>
 	<body>
 
-
-  		<div data-role="page" class="nd2-no-menu-swipe">
-
-  			<nd2-include data-src="/examples/fragments/panel.left.html"></nd2-include>
-
-
-  			<div data-role="header" data-position="fixed" class="wow fadeIn">
-  				<a href="#leftpanel" class="ui-btn ui-btn-left"><i class="zmdi zmdi-menu"></i></a>
-  				<h1 class="wow fadeIn" data-wow-delay='0.4s'>Tabs</h1>
-
-  				<ul data-role="nd2tabs" data-swipe="true">
-  					<li data-tab="about">About Me</li>
-  					<li data-tab="work" data-tab-active="true">Work</li>
-  					<li data-tab="Contact">Contact</li>
-  				</ul>
-
-  			</div>
-
-  			<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+    <div data-role="header">
+          <div data-role="navbar" data-iconpos="top">
+              <ul>
+                  <li><a href="about" data-icon="user">About</a></li>
+                  <li><a href="work" data-icon="shop">Work</a></li>
+                  <li><a href="#" data-icon="mail">Contact</a></li>
+              </ul>
+          </div><!-- /navbar -->
+</div><!-- /header -->
 
 
-          <!--\\\\\\\\\\\\\\\\\ ABOUT  ///////////////////// -->
+<!-- \\\\\\\\\\\\\\\\\\\\ ABOUT //////////////////// -->
+<div data-role="page" id="about">
+
+  <video playsinline="" autoplay="" muted="" loop="" poster="" id="bgvid" class="">
+  <source src="http://kullukianharout.com/media/intro.mp4" type="video/mp4">
+  </video>
+</div><!-- /page -->
 
 
-  					<div data-role="nd2tab"
-  								data-tab="about">
-
-  				<nd2-ad data-banner="sample.banner"></nd2-ad>
+ <!-- \\\\\\\\\\\\\\\\\\\\PORFOLIO//////////////////// -->
 
 
-  					</div>
+<!-- Start of second page -->
+<div data-role="page" id="work">
+
+	<div data-role="header">
+		<h1>Portfolio</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
 
 
-            <!-- \\\\\\\\\\\\\\\\\\\\\\\END ABOUT//////////////////////// -->
+    <a href="#about" class="ui-btn ui-shadow ui-corner-all">Show page "two"</a>
+	</div><!-- /content -->
 
-
-            <!--\\\\\\\\\\\\\\\\\ WORK ///////////////////// -->
-
-  					<div data-role="nd2tab"
-  								data-tab="work">
-
-
-
-
-  					</div>
-
-            <!-- \\\\\\\\\\\\\\\\\\\\\\\END WORK//////////////////////// -->
-
-
-
-
-            <!-- \\\\\\\\\\\\\\\\\\\\\\\CONTACT//////////////////////// -->
-
-  					<div data-role="nd2tab"
-  								data-tab="contact">
-
-
-
-  								<!-- Simple Card with Title !-->
-
-
-  					</div>
-            <!-- \\\\\\\\\\\\\\\\\\\\\\\END CONTACT//////////////////////// -->
-
-
-
-  		</div>
-
-
-
-
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
 
 
 	</body>
