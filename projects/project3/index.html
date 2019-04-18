@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/isotope.css">
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/lightbox.min.css">
+
 
 
 	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
@@ -25,7 +27,7 @@
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-animation-iconic-font/2.2.0/css/material-animation-iconic-font.min.css">
 
 </head>
 
@@ -36,7 +38,7 @@
 			            <ul>
 				                <li><a href="about" data-icon="user">About</a></li>
 				                <li><a href="work" data-icon="shop">Work</a></li>
-				                <li><a href="#" data-icon="mail">Contact</a></li>
+				                <li><a href="contact" data-icon="mail">Contact</a></li>
 				            </ul>
 			        </div><!-- /navbar -->
 	</div><!-- /header -->
@@ -64,127 +66,147 @@
 	<!-- Start of second page -->
 	<div data-role="page" id="work">
 
-		<div data-role="header">
-			<h1>Portfolio</h1>
-		</div><!-- /header -->
 
-		<div role="main" class="ui-content">
+		<div class="container">
 
-			<div class="container">
+	 	  <!-- Isotope Gallery -->
+	 	  <section class="isotope-gallery">
 
-				  <!-- Isotope Gallery -->
-				  <section class="isotope-gallery">
+	 		<!-- Isotope Header -->
+	 		<div class="row">
+	 		  <div class="col-md-12">
 
-					<!-- Isotope Header -->
-					<div class="row">
-					  <div class="col-md-12">
+	 			<!-- Isotope Filters -->
+	 			<h2 class="isotope-button-title">Isotope Lightbox Gallery</h2>
+	 			<hr/>
+	 			<div id="isotope-filters" class="isotope-button-group">
+	 			  <button class="link is-checked" data-filter="*">show all</button>
+	 			  <button class="link" data-filter=".design">design</button>
+	 			  <button class="link" data-filter=".quality">quality</button>
+	 			  <button class="link" data-filter=".interface">interface</button>
+	 			</div>
+	 			<!-- Isotope Filters -->
 
-						<!-- Isotope Filters -->
-						<h2 class="isotope-button-title">Isotope Lightbox Gallery</h2>
-						<hr/>
-						<div id="isotope-filters" class="isotope-button-group">
-						  <button class="link is-checked" data-filter="*">show all</button>
-						  <button class="link" data-filter=".design">design</button>
-						  <button class="link" data-filter=".quality">quality</button>
-						  <button class="link" data-filter=".interface">interface</button>
-						</div>
-						<!-- Isotope Filters -->
+	 		  </div>
+	 		</div>
+	 		<!-- Isotope Header -->
 
-					  </div>
-					</div>
-					<!-- Isotope Header -->
+	 		<!-- Isotope Grid -->
+	 		<div class="row isotope-grid">
 
-					<!-- Isotope Grid -->
-					<div class="row isotope-grid">
+	 		  <!-- Isotope Grid-Item -->
+	 		  <div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  design ">
+	 			<div class="isotope-item">
+	 			  <a href="assets/customs/img/design1.jpg" data-lightbox="isotope-gallery" data-title="Image Title">
+	 				<img src="assets/customs/img/design1.jpg" class="img-responsive center-block">
+	 			  </a>
+	 			</div>
+	 		  </div>
+	 		  <!-- Isotope Grid-Item -->
 
-					  <!-- Isotope Grid-Item -->
-					  <div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  design ">
-						<div class="isotope-item">
-						  <a href="assets/customs/img/design1.jpg" data-lightbox="isotope-gallery" data-title="Image Title">
-							<img src="assets/customs/img/design1.jpg" class="img-responsive center-block">
-						  </a>
-						</div>
-					  </div>
-					  <!-- Isotope Grid-Item -->
+	 		  <!-- Isotope Grid-Item -->
+	 		  <div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  design ">
+	 			<div class="isotope-item">
+	 			  <a href="assets/customs/img/design2.jpg" data-lightbox="isotope-gallery" data-title="Image Title">
+	 				<img src="assets/customs/img/design2.jpg" class="img-responsive center-block">
+	 			  </a>
+	 			</div>
+	 		  </div>
+	 		  <!-- Isotope Grid-Item -->
 
-					  <!-- Isotope Grid-Item -->
-					  <div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  design ">
-						<div class="isotope-item">
-						  <a href="assets/customs/img/design2.jpg" data-lightbox="isotope-gallery" data-title="Image Title">
-							<img src="assets/customs/img/design2.jpg" class="img-responsive center-block">
-						  </a>
-						</div>
-					  </div>
-					  <!-- Isotope Grid-Item -->
+	 		  <!-- Isotope Grid-Item -->
+	 		  <div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  quality interface ">
+	 			<div class="isotope-item">
+	 			  <a href="assets/customs/img/quality1.jpg" data-lightbox="isotope-gallery" data-title="Image Title">
+	 				<img src="assets/customs/img/quality1.jpg" class="img-responsive center-block">
+	 			  </a>
+	 			</div>
+	 		  </div>
+	 		  <!-- Isotope Grid-Item -->
 
-					  <!-- Isotope Grid-Item -->
-					  <div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  quality interface ">
-						<div class="isotope-item">
-						  <a href="assets/customs/img/quality1.jpg" data-lightbox="isotope-gallery" data-title="Image Title">
-							<img src="assets/customs/img/quality1.jpg" class="img-responsive center-block">
-						  </a>
-						</div>
-					  </div>
-					  <!-- Isotope Grid-Item -->
+	 		  <!-- Isotope Grid-Item -->
+	 		  <div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  interface quality ">
+	 			<div class="isotope-item">
+	 			  <a href="assets/customs/img/quality3.jpg" data-lightbox="isotope-gallery" data-title="Image Title">
+	 				<img src="assets/customs/img/quality3.jpg" class="img-responsive center-block">
+	 			  </a>
+	 			</div>
+	 		  </div>
+	 		  <!-- Isotope Grid-Item -->
 
-					  <!-- Isotope Grid-Item -->
-					  <div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  interface quality ">
-						<div class="isotope-item">
-						  <a href="assets/customs/img/quality3.jpg" data-lightbox="isotope-gallery" data-title="Image Title">
-							<img src="assets/customs/img/quality3.jpg" class="img-responsive center-block">
-						  </a>
-						</div>
-					  </div>
-					  <!-- Isotope Grid-Item -->
+	 		  <!-- Isotope Grid-Item -->
+	 		  <div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  quality ">
+	 			<div class="isotope-item">
+	 			  <a href="assets/customs/img/quality2.png" data-lightbox="isotope-gallery" data-title="Image Title">
+	 				<img src="assets/customs/img/quality2.png" class="img-responsive center-block">
+	 			  </a>
+	 			</div>
+	 		  </div>
+	 		  <!-- Isotope Grid-Item -->
 
-					  <!-- Isotope Grid-Item -->
-					  <div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  quality ">
-						<div class="isotope-item">
-						  <a href="assets/customs/img/quality2.png" data-lightbox="isotope-gallery" data-title="Image Title">
-							<img src="assets/customs/img/quality2.png" class="img-responsive center-block">
-						  </a>
-						</div>
-					  </div>
-					  <!-- Isotope Grid-Item -->
+	 		  <!-- Isotope Grid-Item -->
+	 		  <div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  interface ">
+	 			<div class="isotope-item">
+	 			  <a href="assets/customs/img/interface1.jpg" data-lightbox="isotope-gallery" data-title="Image Title">
+	 				<img src="assets/customs/img/interface1.jpg" class="img-responsive center-block">
+	 			  </a>
+	 			</div>
+	 		  </div>
+	 		  <!-- Isotope Grid-Item -->
 
-					  <!-- Isotope Grid-Item -->
-					  <div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  interface ">
-						<div class="isotope-item">
-						  <a href="assets/customs/img/interface1.jpg" data-lightbox="isotope-gallery" data-title="Image Title">
-							<img src="assets/customs/img/interface1.jpg" class="img-responsive center-block">
-						  </a>
-						</div>
-					  </div>
-					  <!-- Isotope Grid-Item -->
+	 		  <!-- Isotope Grid-Item -->
+	 		  <div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  interface design ">
+	 			<div class="isotope-item">
+	 			  <a href="assets/customs/img/interface2.png" data-lightbox="isotope-gallery" data-title="Image Title">
+	 				<img src="assets/customs/img/interface2.png" class="img-responsive center-block">
+	 			  </a>
+	 			</div>
+	 		  </div>
+	 		  <!-- Isotope Grid-Item -->
 
-					  <!-- Isotope Grid-Item -->
-					  <div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  interface design ">
-						<div class="isotope-item">
-						  <a href="assets/customs/img/interface2.png" data-lightbox="isotope-gallery" data-title="Image Title">
-							<img src="assets/customs/img/interface2.png" class="img-responsive center-block">
-						  </a>
-						</div>
-					  </div>
-					  <!-- Isotope Grid-Item -->
+	 		  <!-- Isotope Grid-Item -->
+	 		  <div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  design ">
+	 			<div class="isotope-item">
+	 			  <a href="assets/customs/img/design4.jpg" data-lightbox="isotope-gallery" data-title="Image Title">
+	 				<img src="assets/customs/img/design4.jpg" class="img-responsive center-block">
+	 			  </a>
+	 			</div>
+	 		  </div>
+	 		  <!-- Isotope Grid-Item -->
 
-					  <!-- Isotope Grid-Item -->
-					  <div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  design ">
-						<div class="isotope-item">
-						  <a href="assets/customs/img/design4.jpg" data-lightbox="isotope-gallery" data-title="Image Title">
-							<img src="assets/customs/img/design4.jpg" class="img-responsive center-block">
-						  </a>
-						</div>
-					  </div>
-					  <!-- Isotope Grid-Item -->
+	 		</div>
+	 		<!-- Isotope Grid -->
 
-					</div>
-					<!-- Isotope Grid -->
+	 	  </section>
+	 	  <!-- Isotope Gallery -->
 
-				  </section>
-				  <!-- Isotope Gallery -->
+	 	</div>
 
-				</div>
 
+
+			<a href="#contact" class="ui-btn ui-btn-inline" id="portfolio">Contact Me</a>
+
+
+
+		</div><!-- /page --> -->
+
+
+
+
+
+
+		<!-- Start of Contact page -->
+		<div data-role="page" id="contact">
+
+
+
+
+
+				<a href="#about" class="ui-btn ui-btn-inline" id="portfolio">Home</a>
+
+
+
+			</div><!-- /page --> -->
 
 
 
@@ -198,9 +220,10 @@
 <script src="/js/libraries/nativedroid2.js"></script>
 <script src="/js/libraries/jquery.mb.YTPlayer.js"></script>
 <script src="/js/script.js"></script>
-<script src="/js/isotope.js"></script>
 <script src="/js/isotope.pkgd.min.js"></script>
-<script src="js\bootstrap.min.js"></script>
+<script src="/js/isotope.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/lightbox.min.js"></script>
 
 
 
