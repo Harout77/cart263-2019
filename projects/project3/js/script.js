@@ -11,7 +11,17 @@ author, and this description to match your project!
 ******************/
 
 
-
+function resizebg(){
+     $('#background').css("height", $(document).height());
+ }
+ $(window).resize(function(){
+     resizebg();
+ });
+ $(document).scroll(function(){
+     resizebg();
+ });
+ //initial call
+ resizebg();
 
 
 // BACKGROUND VIDEO
