@@ -21,7 +21,7 @@ video#bgvid {
     background: url(polina.jpg) no-repeat;
     background-size: cover;
 }
-button {
+button#vidpause {
 
 left: 50%;
 top: -55%;
