@@ -10,6 +10,10 @@ author, and this description to match your project!
 
 ******************/
 
+
+
+
+
 // BACKGROUND VIDEO
 var vid = document.getElementById("bgvid"),
 pauseButton = document.getElementById("vidpause");
