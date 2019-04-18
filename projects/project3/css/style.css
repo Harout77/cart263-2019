@@ -3,7 +3,18 @@
 This is the style file for this project.
 
 **********************************************/
+*/
+:root {
+    --color-body-bg: rgba(255,255,255,1);
+    --color-body: rgba(68,68,68,1);
+}
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-body-bg: rgba(0,0,0,1);
+        --color-body: rgba(255,255,255,.85);
+    }
+}
 
 video#bgvid {
     position: fixed;
