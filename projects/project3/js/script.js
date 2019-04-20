@@ -9,21 +9,6 @@ This is a template. You must fill in the title,
 author, and this description to match your project!
 
 ******************/
-
-
-function resizebg(){
-     $('#background').css("height", $(document).height());
- }
- $(window).resize(function(){
-     resizebg();
- });
- $(document).scroll(function(){
-     resizebg();
- });
- //initial call
- resizebg();
-
-
 // BACKGROUND VIDEO
 var vid = document.getElementById("bgvid"),
 pauseButton = document.getElementById("vidpause");
@@ -103,3 +88,15 @@ function validateForm() {
   document.getElementById('contact-form').submit();
 
   }
+  (function() {
+  var body = document.body;
+  var burgerMenu = document.getElementsByClassName('b-menu')[0];
+  var burgerContain = document.getElementsByClassName('b-container')[0];
+  var burgerNav = document.getElementsByClassName('b-nav')[0];
+
+  burgerMenu.addEventListener('click', function toggleClasses() {
+    [body, burgerContain, burgerNav].forEach(function (el) {
+      el.classList.toggle('open');
+    });
+  }, false);
+})();

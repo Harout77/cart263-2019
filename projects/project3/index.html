@@ -1,75 +1,58 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
-	<title>Test</title>
+	<title>Harout Kullukian~Portfolio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css" />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/lightbox.min.css">
-
-
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-animation-iconic-font/2.2.0/css/material-animation-iconic-font.min.css">
-
-</head>
-
 <body>
-
-	<div data-role="header">
-		        <div data-role="navbar" data-iconpos="top">
-			            <ul>
-				                <li><a href="about" data-icon="user">About</a></li>
-				                <li><a href="work" data-icon="shop">Work</a></li>
-				                <li><a href="contact" data-icon="mail">Contact</a></li>
-				            </ul>
-			        </div><!-- /navbar -->
-	</div><!-- /header -->
-
-	<!--
 <!-- \\\\\\\\\\\\\\\\\\\\ ABOUT //////////////////// -->
 	<div data-role="page" id="about">
-
+		<!-- \\\\\\\\\\\\\\\\\\\\ Background Video //////////////////// -->
 		<video playsinline="" autoplay="" muted="" loop="" poster="" id="bgvid" class="">
 			<source src="assets/video/intro.mp4" type="video/mp4">
 		</video>
-
+		<!-- \\\\\\\\\\\\\\\\\\\\ button to portfolio //////////////////// -->
 		<button class="ui-btn ui-icon-forbidden ui-btn-icon-notext ui-corner-all" id="vidpause">Pause</button>
-
 		<a href="#work" class="ui-btn ui-btn-inline" id="portfolio">View Portfolio</a>
-
-
-
 	</div><!-- /page --> -->
-
-
 	<!-- \\\\\\\\\\\\\\\\\\\\PORFOLIO//////////////////// -->
-
-
-	<!-- Start of second page -->
+	<!-- \\\\\\\\\\\\\\\\\\\\ START OF PORTFOLIO //////////////////// -->
 	<div data-role="page" id="work">
-
-
+		<!-- Navigation -->
+		<div class="b-nav">
+		  <li><a class="b-link" href="#about">Home</a></li>
+		  <li><a class="b-link" href="#work">Portfolio</a></li>
+		  <li><a class="b-link" href="#game">Games</a></li>
+		  <li><a class="b-link" href="#contact">Contact</a></li>
+		</div>
+		<!-- Burger-Icon -->
 		<div class="container">
-
+			<div class="b-container">
+				<div class="b-menu">
+					<div class="b-bun b-bun--top"></div>
+					<div class="b-bun b-bun--mid"></div>
+					<div class="b-bun b-bun--bottom"></div>
+				</div>
+				<!-- Burger-Brand -->
+				<a href="http://kullukianharout.com/" class="b-brand">Harout Kullukian</a>
+			</div>
 			<!-- Isotope Gallery -->
 			<section class="isotope-gallery">
-
 				<!-- Isotope Header -->
 				<div class="row">
 					<div class="col-md-12">
-
 						<!-- Isotope Filters -->
-						<h2 class="isotope-button-title">My Portfolio</h2>
+						<h2 id="title">My Portfolio</h2>
 						<hr />
 						<div class="col-md-12">
-
+							<!-- \\\\\\\\\\\\\\\\\\\FILTERS//////////////////// -->
 							<div id="isotope-filters" class="isotope-button-group">
 								<button class="link" data-filter="*">show all</button>
 								<button class="link" data-filter=".animation">animation</button>
@@ -81,52 +64,35 @@
 					</div>
 				</div>
 				<!-- Isotope Header -->
-
 				<!-- Isotope Grid -->
 				<div class="row isotope-grid">
-
 					<!-- Isotope Grid-Item -->
 					<div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  animation ">
 						<div class="isotope-item">
-							<!-- <a href="assets/portfolio/gw.jpg" data-lightbox="isotope-gallery" data-title="Image Title"> -->
-								<!-- <img src="assets/portfolio/gw.jpg" class="img-responsive center-block">
-
-							</a> -->
-
-							<video width="255px" height="177px" controls class="lightbox-vid"  >
-<source src="assets/video/intro.mp4" type="video/mp4">
-
-</video>
+						<video width="255px" height="177px" controls class="lightbox-vid">
+								<source src="assets/video/intro.mp4" type="video/mp4">
+							</video>
 						</div>
 					</div>
 					<!-- Isotope Grid-Item -->
-
 					<!-- Isotope Grid-Item -->
 					<div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  animation ">
 						<div class="isotope-item">
-
-							<video width="255px" height="177px" controls class="lightbox-vid"  >
-<source src="assets/video/gw.mp4" type="video/mp4">
-
-
-
-</video>
-
+							<video width="255px" height="177px" controls class="lightbox-vid">
+								<source src="assets/video/gw.mp4" type="video/mp4">
+							</video>
 						</div>
 					</div>
 					<!-- Isotope Grid-Item -->
-
 					<!-- Isotope Grid-Item -->
 					<div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item animation ">
 						<div class="isotope-item">
-							<video width="255px" height="177px" controls class="lightbox-vid"  >
-<source src="assets/video/projection.mp4" type="video/mp4">
-
-</video>
+							<video width="255px" height="177px" controls class="lightbox-vid">
+								<source src="assets/video/projection.mp4" type="video/mp4">
+							</video>
 						</div>
 					</div>
 					<!-- Isotope Grid-Item -->
-
 					<!-- Isotope Grid-Item -->
 					<div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  game ">
 						<div class="isotope-item">
@@ -136,7 +102,6 @@
 						</div>
 					</div>
 					<!-- Isotope Grid-Item -->
-
 					<!-- Isotope Grid-Item -->
 					<div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  game ">
 						<div class="isotope-item">
@@ -146,7 +111,6 @@
 						</div>
 					</div>
 					<!-- Isotope Grid-Item -->
-
 					<!-- Isotope Grid-Item -->
 					<div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item game other ">
 						<div class="isotope-item">
@@ -156,7 +120,6 @@
 						</div>
 					</div>
 					<!-- Isotope Grid-Item -->
-
 					<!-- Isotope Grid-Item -->
 					<div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  game ">
 						<div class="isotope-item">
@@ -166,150 +129,107 @@
 						</div>
 					</div>
 					<!-- Isotope Grid-Item -->
-
-					<!-- Isotope Grid-Item -->
-					<!-- <div class="col-md-3 col-sm-4 col-xs-12 isotope-grid-item  animation ">
-	 			<div class="isotope-item">
-	 			  <a href="assets/portfolio/animation4.jpg" data-lightbox="isotope-gallery" data-title="Image Title">
-	 				<img src="assets/portfolio/animation4.jpg" class="img-responsive center-block">
-	 			  </a>
-	 			</div>
-	 		  </div> -->
-					<!-- Isotope Grid-Item -->
-
 				</div>
 				<!-- Isotope Grid -->
-
 			</section>
 			<!-- Isotope Gallery -->
-
 		</div>
-
-
-
+		<!-- \\\\\\\\\\\\\\\\\\\\ CONTACT BUTTON //////////////////// -->
 		<a href="#contact" class="ui-btn ui-btn-inline" id="portfolio3">Contact Me</a>
-
-	</div><!-- /page --> -->
-
-
-
-
-
-
+	</div><!-- /page -->
 	<!-- Start of Contact page -->
 	<div data-role="page" id="contact">
-
-
+		<!-- Burger-Icon -->
 		<div class="container">
+			<div class="b-nav">
+				<li><a class="b-link" href="#about">Home</a></li>
+				<li><a class="b-link" href="#work">Portfolio</a></li>
+				<li><a class="b-link" href="#game">Games</a></li>
+				<li><a class="b-link" href="#contact">Contact</a></li>
+			</div>
+			<div class="b-container">
+				<div class="b-menu">
+					<div class="b-bun b-bun--top"></div>
+					<div class="b-bun b-bun--mid"></div>
+					<div class="b-bun b-bun--bottom"></div>
+				</div>
+				<!-- Burger-Brand -->
+				<a href="http://kullukianharout.com/" class="b-brand">Harout Kullukian</a>
+			</div>
+		<!-- \\\\\\\\\\\\\\\\\\\\START OF CONTACT FORM //////////////////// -->
+			<section class="section">
+				<!--Section heading-->
+				<h2 class="section-heading h1 pt-4">Contact Me</h2>
+				<!--Section description-->
+				<p class="section-description">If you like what you see and want to work with me, caontact me!</p>
+				<div class="row">
+					<!--Grid column-->
+					<div class="col-md-8 col-xl-9">
+						<form id="contact-form" name="contact-form" action="mail.php" method="POST">
+							<!--Grid row-->
+							<div class="row">
+								<!--Grid column-->
+								<div class="col-md-6">
+									<div class="md-form">
+										<div class="md-form">
+											<input type="text" id="name" name="name" class="form-control">
+											<label for="name" class="">Your name</label>
+										</div>
+									</div>
+								</div>
+								<!--Grid column-->
+								<!--Grid column-->
+								<div class="col-md-6">
+									<div class="md-form">
+										<div class="md-form">
+											<input type="text" id="email" name="email" class="form-control">
+											<label for="email" class="">Your email</label>
+										</div>
+									</div>
+								</div>
+								<!--Grid column-->
+							</div>
+							<!--Grid row-->
+							<!--Grid row-->
+							<div class="row">
+								<div class="col-md-12">
+									<div class="md-form">
+										<input type="text" id="subject" name="subject" class="form-control">
+										<label for="subject" class="">Subject</label>
+									</div>
+								</div>
+							</div>
+							<!--Grid row-->
+							<!--Grid row-->
+							<div class="row">
+								<!--Grid column-->
+								<div class="col-md-12">
 
-
-
-
-	        <!--Section: Contact v.2-->
-	        <section class="section">
-
-	            <!--Section heading-->
-	            <h2 class="section-heading h1 pt-4">Contact Me</h2>
-	            <!--Section description-->
-	            <p class="section-description">If you like what you see and want to work with me, caontact me!</p>
-
-	            <div class="row">
-
-	                <!--Grid column-->
-	                <div class="col-md-8 col-xl-9">
-	                    <form id ="contact-form" name="contact-form" action="mail.php" method="POST">
-
-	                        <!--Grid row-->
-	                        <div class="row">
-
-	                            <!--Grid column-->
-	                            <div class="col-md-6">
-	                                <div class="md-form">
-	                                    <div class="md-form">
-	                                        <input type="text" id="name" name="name" class="form-control">
-	                                        <label for="name" class="">Your name</label>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                            <!--Grid column-->
-
-	                            <!--Grid column-->
-	                            <div class="col-md-6">
-	                                <div class="md-form">
-	                                    <div class="md-form">
-	                                        <input type="text" id="email" name="email" class="form-control">
-	                                        <label for="email" class="">Your email</label>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                            <!--Grid column-->
-
-	                        </div>
-	                        <!--Grid row-->
-
-	                        <!--Grid row-->
-	                        <div class="row">
-	                            <div class="col-md-12">
-	                                <div class="md-form">
-	                                    <input type="text" id="subject" name="subject" class="form-control">
-	                                    <label for="subject" class="">Subject</label>
-	                                </div>
-	                            </div>
-	                        </div>
-	                        <!--Grid row-->
-
-	                        <!--Grid row-->
-	                        <div class="row">
-
-	                            <!--Grid column-->
-	                            <div class="col-md-12">
-
-	                                <div class="md-form">
-	                                    <textarea type="text" id="message" name="message" class="md-textarea"></textarea>
-	                                    <label for="message">Your message</label>
-	                                </div>
-
-	                            </div>
-	                        </div>
-	                        <!--Grid row-->
-
-	                    </form>
-
-	                    <div class="center-on-small-only">
-	                        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
-	                    </div>
-	                </div>
-	                <!--Grid column-->
-
-
-
-	            </div>
-
-	        </section>
-	        <!--Section: Contact v.2-->
-
-
-
-
-	    </div>
-
+									<div class="md-form">
+										<textarea type="text" id="message" name="message" class="md-textarea"></textarea>
+										<label for="message">Your message</label>
+									</div>
+								</div>
+							</div>
+							<!--Grid row-->
+						</form>
+						<div class="center-on-small-only">
+							<a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+						</div>
+					</div>
+					<!--Grid column-->
+				</div>
+			</section>
+			<!--Section: Contact v.2-->
+		</div>
 		<!--Section: Contact v.2-->
-
-
 		<a href="#about" class="ui-btn ui-btn-inline" id="about2">Home</a>
 		<a href="#work" class="ui-btn ui-btn-inline" id="portfolio2">Portfolio</a>
-
-
-
-	</div><!-- /page --> -->
-
-
-
+<!-- /page -->
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js" async></script>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -317,11 +237,5 @@
 <script src="js/lightbox.min.js"></script>
 <script src="js/isotope.js"></script>
 <script src="js/script.js"></script>
-
-
-
-
-
-
-
+</head>
 </html>
