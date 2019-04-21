@@ -100,7 +100,7 @@ function validateForm() {
     [body, burgerContain, burgerNav].forEach(function (el) {
       el.classList.toggle('open');
     });
-  }, true);
+  }, false);
 })();
 
 /////////// COUNT DOWN /////////
