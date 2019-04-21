@@ -1,0 +1,21 @@
+Harout Kullukian
+Project 3
+ 
+                                          Portfolio Jquery Mobile
+                                          
+                                          
+                                          
+                                          
+For my final project, i decided to start creating a revised version of my portfolio website.
+During the semester, I learned Jquery, and Jquery UI and other interesting libraries and I created some good stuff. I wanted to build a site using what I learned and put all my work together and so i can update it every time i have something good i can add to my portfolio.
+
+I used another library that's related to Jquery, the mobile version of it. The reason why i chose this is because a lot of people use their phones to look at stuff and making a regular site is not always compatible on a mobile device. It's more accessible to view a portfolio on a mobile device, so making the design with a framework of a mobile device in minde is a smart way to present my work.
+
+I used Jquery mobile as the central framework of my site. I added an external library bootstrap to stylize the site. The site is not complete since I will continue adding new work to the portfolio page. I also have a game page that I am currently working on. It’s not done yet that’s why it’s not available on the page yet. Instead, I added a countdown when the game will be available. The timer is not correct, it’s just a placeholder date. Next, i have a contact page if someone wants to contact me for work or questions about my work. I used php to create the contact email form since it’s the easiest way for a working email contact.
+
+I had a lot of challenges creating this project. I first wanted to finish the game that I mentioned above but I have no time to finish ot since it requires a lot of work. Another challenge was the very odd bugs that suppose to be working but not. The navigation bar that is one the portfolio page is working fine but for some odd reason I couldn’t add it to the other pages. Instead of wasting time to figure it out, I created a different, simple navigation bar.
+
+Like I said, this site is still an ongoing project, and I will continue working on it. This is just a demo version and I can’t wait to add the game to it !
+
+
+
